@@ -1,0 +1,297 @@
+@charset "UTF-8";
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Importar css------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@import url(import/class.css);
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Estilo Oscuro-----------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Estilo Claro------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+-----------------------------------Estilos Constantes-------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Arvo", serif;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+--------------------------------Suaviza transiciones de link internos---------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+html {
+  scroll-behavior: smooth;
+  /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Body----------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+}
+
+html body {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #0050ac, rgba(0, 0, 0, 0.953));
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-blend-mode: difference;
+}
+
+html body.dark {
+  background: radial-gradient(ellipse at bottom, #444d57, rgba(0, 0, 0, 0.953));
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+---------------------------------------Barra de Menu--------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+nav {
+  z-index: 1;
+  /* background: $light-wallpaper-menu;
+  */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+-----------------------------------Botón de Oscurecer--------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+}
+
+body.dark nav {
+  /* background: $dark-wallpaper-menu;
+  */
+}
+
+nav a {
+  text-decoration: none;
+  color: #f3ba00;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 20px;
+  font-size: 1.5em;
+  /* border: 1px solid aqua;*/
+  width: 100%;
+  text-align: center;
+  -webkit-transition: 0.3 ease-out all;
+  transition: 0.3 ease-out all;
+}
+
+body.dark nav a {
+  color: #58a6ff;
+}
+
+nav a #da {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+nav a:hover {
+  background: #1d2f3d;
+  color: #f3ba00;
+  text-shadow: 2px 2px 6px #1d2f3d;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+body.dark nav a:hover {
+  background: #c9d1d9;
+  color: #161b22;
+  text-shadow: 2px 2px 6px #161b22;
+}
+
+nav .switch {
+  background: #343d5b;
+  border-radius: 1000px;
+  margin-top: 20px;
+  border: none;
+  height: 30px;
+  width: 60px;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
+nav .switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #f2f2f2;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  -webkit-box-shadow: 0px 0px 2px 2px black;
+          box-shadow: 0px 0px 2px 2px black;
+}
+
+nav .switch.active {
+  background: #f2f2f2;
+}
+
+nav .switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+nav .switch span {
+  line-height: 30px;
+  display: block;
+  background: none;
+}
+
+nav .switch span img {
+  width: 30px;
+  height: 30px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Back to Top-------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#scroll-back-to-top {
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 92.5%;
+  top: 80%;
+  font-size: 50px;
+  position: fixed;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  color: #1d2f3d;
+}
+
+body.dark #scroll-back-to-top {
+  color: #c9d1d9;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Aside-------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+main {
+  min-height: 100vh;
+  /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Articuló----------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+}
+
+main aside {
+  min-width: 200px;
+  margin: 40px 20px 20px 0;
+  height: 100%;
+  background: #1d2f3d;
+  padding: 20px;
+  border-radius: 5%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40px;
+}
+
+body.dark main aside {
+  background: #21262d;
+}
+
+main aside h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  margin-bottom: 5x;
+  text-align: justify;
+  color: #c9d1d9;
+  font-weight: normal;
+  padding: 0px 0px 20px 0px;
+}
+
+main aside a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #f3ba00;
+  font-size: 1em;
+}
+
+body.dark main aside a {
+  color: #58a6ff;
+}
+
+main h2 {
+  color: #000000;
+  font-weight: normal;
+  padding-top: 40px;
+}
+
+body.dark main h2 {
+  color: #c9d1d9;
+}
+
+main h3 {
+  color: #000000;
+  font-weight: normal;
+  padding: 10px 0px 10px 0px;
+  font-size: 1.5em;
+}
+
+body.dark main h3 {
+  color: #c9d1d9;
+}
+
+main i {
+  font-size: 14xp;
+  color: #6d6d6d;
+}
+
+body.dark main i {
+  color: #21262d;
+}
+
+main p {
+  margin-bottom: 10px;
+  line-height: 20px;
+  color: #252525;
+}
+
+body.dark main p {
+  color: #8b949e;
+}
+
+main p a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------------Footer--------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+footer {
+  background: #1d2f3d;
+  color: #c9d1d9;
+  padding: 10px 0px;
+  text-align: center;
+  width: 100%;
+}
+
+body.dark footer {
+  background: #161b22;
+}
+
+/*footer #menu-footer{
+  position: sticky;
+  bottom: 0;
+}*/
+/*# sourceMappingURL=SCSS.css.map */

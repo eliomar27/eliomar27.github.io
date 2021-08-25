@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+		<!--esto es para no tener errores el momento de poner valores como la Ñ <meta charset="utf-8" /> -->	
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="ICO.ico" type="image/x-icom"/>
+		<!--<link href="CSS.CSS" rel="stylesheet"/>-->
+		<link href="SCSS.css" rel="stylesheet">
+		<link href="normalize.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet"> 
+		<title>Portafolio</title>
+	</head>
+	<body>
+		<header id="inicio"><!--Punto de referencia para el Go to top -->
+			<nav class="menu">
+				<div class="contenedor">
+					<a href="index.html">Inicio</a>
+					<a href="sub_pages.html">Fondos</a>
+					<a href="Paginas.html">Paginas</a>
+					<a href="Autor.html">Autor</a>
+					<a href="Contacto.html">Contacto</a>
+					<a id="da" href="404.html">404</a>
+					<button class="switch" id="switch">
+						<span ><img id="modo-nocturno-icon" src="sun.svg" alt=""></span>
+						<span><img id="modo-nocturno-ico" src="moon.svg" alt=""></span>	
+					</button>
+				</div>
+			</nav>
+		<div class="slider">
+				<div class="slides"> 
+					<!--radio buttons start-->
+					<input type="radio" name="radio-btn" id="radio1">
+					<input type="radio" name="radio-btn" id="radio2">
+					<input type="radio" name="radio-btn" id="radio3">
+					<input type="radio" name="radio-btn" id="radio4">
+					<input type="radio" name="radio-btn" id="radio5">
+					<input type="radio" name="radio-btn" id="radio6">
+					<input type="radio" name="radio-btn" id="radio7">
+					<input type="radio" name="radio-btn" id="radio8">
+					<input type="radio" name="radio-btn" id="radio9">
+					<input type="radio" name="radio-btn" id="radio10">
+					<!--radio buttons end-->
+					<!--slide images end-->
+					<!--slide images start-->
+					<div class="slide first">
+						<img src="1.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="2.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="3.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="4.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="5.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="6.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="7.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="8.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="9.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="10.jpg" alt="">
+					</div>
+					<!--automatic navigation start-->
+					<div class="navigation-auto">
+						<div class="auto-btn1"></div>
+						<div class="auto-btn2"></div>
+						<div class="auto-btn3"></div>
+						<div class="auto-btn4"></div>
+						<div class="auto-btn5"></div>
+						<div class="auto-btn6"></div>
+						<div class="auto-btn7"></div>
+						<div class="auto-btn8"></div>
+						<div class="auto-btn9"></div>
+						<div class="auto-btn10"></div>
+					</div>
+					<!--automatic navigation end-->
+				</div>
+			</div>
+		</header>
+		<button onclick="topFunction()" id="scroll-back-to-top" title="Go to top">➤</button>
+		<br> <br>
+		<main id="blog">
+			<!--el class contenedor es par centrar los elementos-->
+			<div class="contenedor">
+				<aside class="aside">
+					<h3 class="titulo-aside">Temas</h3>
+					<a href="#html">HTML</a>
+					<a href="#css">CSS</a>
+					<a href="#javascript">JavaScript</a>
+				</aside>
+				<div class="libro">
+					<h2 class="titulo-article" id="html">Html</h2>
+					<i class="fecha-article">Publicado 28 de julio de 2021</i>
+					<p class="text-article">
+						HTML (Lenguaje de Marcas de Hipertexto, del inglés
+						HyperText Markup Language) es el componente más
+						básico de la Web. Define el significado y la 
+						estructura del contenido web. Además de HTML, 
+						generalmente se utilizan otras tecnologías para
+						describir la apariencia/presentación de una página
+						web (CSS) o la funcionalidad/comportamiento (JavaScript).
+						"Hipertexto" hace referencia a los enlaces que conectan 
+						páginas web entre sí, ya sea dentro de un único sitio web
+						o entre sitios web. Los enlaces son un aspecto fundamental
+						de la Web. Al subir contenido a Internet y vincularlo a
+						las páginas creadas por otras personas, te conviertes
+						en un participante activo en la «World Wide Web» (Red Informática Mundial).
+						HTML utiliza "marcas" para etiquetar texto, imágenes y otro contenido
+						para mostrarlo en un navegador Web. Las  marcas HTML incluyen "elementos"
+						especiales
+						Un elemento HTML se distingue de otro texto en un documento mediante 
+						<img class="img-articulo" src="12.jpg" alt="">
+					</p>
+					<h2 class="titulo-article" id="css">CSS</h2>
+					<i class="fecha-article">Publicado 28 de julio de 2021</i>
+					<p class="text-article">
+						Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es 
+						el lenguaje de estilos utilizado para describir la presentación de
+						documentos HTML o XML (en-US) (incluyendo varios languages basados 
+						en XML como SVG, MathML o XHTML). CSS describe como debe ser renderizado 
+						el elemento estructurado en la pantalla, en papel, en el habla o en otros medios.
+						<img class="img-articulo" src="13.jpg" alt="">
+					</p>
+					<h2 class="titulo-article" id="javascript">JavaScript</h2>
+					<i class="fecha-article">Publicado 28 de julio de 2021</i>
+					<p class="text-article">
+						JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado
+						justo-a-tiempo (just-in-time) con funciones de primera clase. Si bien es más conocido 
+						como un lenguaje de scripting (secuencias de comandos) para páginas web, y es usado
+						en muchos entornos fuera del navegador, tal como Node.js, Apache CouchDB y Adobe Acrobat.
+						JavaScript es un lenguaje de programación basada en prototipos, multiparadigma, de un
+						solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa 
+						y declarativa (por ejemplo programación funcional). Lee más en acerca de JavaScript.
+						<img class="img-articulo" src="14.jpg" alt="">
+					</p>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<span>© 2021 Eliomar León</span>
+		</footer>	
+	</body>
+	<script src="Js.js"></script>
+</html>
