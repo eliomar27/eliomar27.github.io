@@ -1,0 +1,339 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Importar css------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@import url(import/class.css);
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Estilo Claro------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+$light-wallpaper-body-top: #37e8fc;
+$light-wallpaper-body-bottom: #1d2f3d;
+$light-wallpaper-menu: #fafafa;
+$light-wallpaper-menu-hover: #1d2f3d;
+$light-wallpaper-switch: #343d5b;
+$light-wallpaper-button-ico: #1d2f3d;
+$light-wallpaper-aside: #1d2f3d;
+$light-wallpaper-footer: #1d2f3d;
+$light-titulo: #000000;
+$light-fecha: #4b4b4b;
+$light-p: #252525;
+$light-menu-a: #f3ba00;
+$light-aside-a: #f3ba00;
+$light-sombra-menu: 2px 2px 6px #1d2f3d;
+$light-link: #0044ff;
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Estilo Oscuro-----------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+$dark-wallpaper-body-top: #1d2733;
+$dark-wallpaper-body-bottom: #142030;
+$dark-wallpaper-menu: #161b22;
+$dark-wallpaper-menu-hover: #c9d1d9;
+$dark-wallpaper-switch: #ffffff;
+$dark-wallpaper-button-ico: #c9d1d9;
+$dark-wallpaper-aside: #21262d;
+$dark-wallpaper-footer: #161b22;
+$dark-titulo: #c9d1d9;
+$dark-fecha: #4e555f;
+$dark-p: #8b949e;
+$dark-menu-a: #c9d1d9;
+$dark-aside-a: #58a6ff;
+$dark-sombra-menu: 2px 2px 6px #161b22;
+$dark-link: #58a6ff;
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+-----------------------------------Estilos Constantes-------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+$switch-circle: #ffffff;
+$text-menu: 30px;
+$text-aside-titulo: 30px;
+$text-aside-a: 20px;
+$text-p: 20px;
+$text-fecha: 17px;
+$text-titulo: 30px;
+$text-back-to-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arvo", serif;
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+--------------------------------Suaviza transiciones de link internos---------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+html {
+  scroll-behavior: smooth;
+  /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Body----------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  body {
+    position: sticky;
+    top: 10px;
+    transition: 0.5s ease all;
+    height: 100vh;
+    background: radial-gradient(
+        ellipse at top,
+        $light-wallpaper-body-top,
+        transparent
+      ),
+      radial-gradient(
+        ellipse at bottom,
+        $light-wallpaper-body-bottom,
+        transparent
+      );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-blend-mode: difference;
+    &.dark {
+      background: radial-gradient(
+        ellipse at top,
+        $dark-wallpaper-body-top,
+        $dark-wallpaper-body-bottom
+      );
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-blend-mode: difference;
+    }
+  }
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+--------------------------------------Estilo pagina 404----------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+article {
+  height: 79.4vh;
+  section {
+    text-align: center;
+    margin-top: 2%;
+    h1 {
+      font-size: $text-back-to-top;
+      margin: 20px;
+      .dark & {
+        color: $dark-titulo;
+      }
+    }
+    p {
+      font-size: $text-p;
+      margin: 20px;
+      .dark & {
+        color: $dark-p;
+      }
+    }
+    br {
+      font-size: $text-fecha;
+    }
+  }
+  /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+--------------------------------------Estilo de paginas y contacto----------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  text-align: center;
+  h1 {
+    font-size: $text-back-to-top;
+    margin: 15%;
+    margin-bottom: 2.5%;
+    .dark & {
+      color: $dark-titulo;
+    }
+  }
+  p {
+    font-size: $text-p;
+    margin-bottom: 15%;
+    .dark & {
+      color: $dark-p;
+    }
+  }
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+---------------------------------------Barra de Menu--------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+nav {
+  z-index: 1;
+  background: $light-wallpaper-menu;
+  position: sticky;
+  top: 0;
+  .dark & {
+    background: $dark-wallpaper-menu;
+  }
+  a {
+    text-decoration: none;
+    color: $light-menu-a;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 20px;
+    font-size: $text-menu;
+    /* border: 1px solid aqua;*/
+    width: 100%;
+    text-align: center;
+    transition: 0.3 ease-out all;
+    body.dark & {
+      color: $dark-menu-a;
+    }
+  }
+  a:hover {
+    background: $light-wallpaper-menu-hover;
+    color: $light-menu-a;
+    text-shadow: $light-sombra-menu;
+    transition: 0.5s ease all;
+    body.dark & {
+      background: $dark-wallpaper-menu-hover;
+      color: $dark-wallpaper-menu;
+      text-shadow: $dark-sombra-menu;
+    }
+  }
+  /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+-----------------------------------Botón de Oscurecer--------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  .switch {
+    background: $light-wallpaper-switch;
+    border-radius: 1000px;
+    margin-top: 20px;
+    border: none;
+    height: 30px;
+    width: 60px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    &::after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      background: $switch-circle;
+      top: 0;
+      left: 0;
+      right: unset;
+      border-radius: 100px;
+      transition: 0.3s ease all;
+      box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 2);
+    }
+    &.active {
+      background: $dark-wallpaper-switch;
+      &::after {
+        right: 0;
+        left: unset;
+      }
+    }
+    span {
+      line-height: 30px;
+      display: block;
+      background: none;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Back to Top-------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#scroll-back-to-top {
+  background: none;
+  border: none;
+  display: flex;
+  left: 92.5%;
+  top: 80%;
+  font-size: $text-back-to-top;
+  position: fixed;
+  transform: rotate(-90deg);
+  color: $light-wallpaper-button-ico;
+  body.dark & {
+    color: $dark-wallpaper-button-ico;
+  }
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Aside-------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+main {
+  min-height: 100vh;
+  aside {
+    min-width: 200px;
+    margin: 40px 20px 20px 0;
+    height: 100%;
+    background: $light-wallpaper-aside;
+    padding: 20px;
+    border-radius: 5%;
+    position: sticky;
+    top: 40px;
+    body.dark & {
+      background: $dark-wallpaper-aside;
+    }
+    h3 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: normal;
+      font-size: $text-aside-titulo;
+      margin-bottom: 5x;
+      text-align: justify;
+      color: $dark-titulo;
+      font-weight: normal;
+      padding: 0px 0px 20px 0px;
+    }
+    a {
+      display: block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: $light-aside-a;
+      font-size: $text-aside-a;
+      body.dark & {
+        color: $dark-aside-a;
+      }
+    }
+  }
+  /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Articuló----------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  h2 {
+    color: $light-titulo;
+    font-weight: normal;
+    padding-top: 40px;
+    font-size: $text-titulo;
+    body.dark & {
+      color: $dark-titulo;
+    }
+  }
+  i {
+    font-size: $text-fecha;
+    color: $light-fecha;
+    body.dark & {
+      color: $dark-fecha;
+    }
+  }
+  p {
+    font-size: $text-p;
+    margin-bottom: 10px;
+    line-height: 20px;
+    color: $light-p;
+    body.dark & {
+      color: $dark-p;
+    }
+  }
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------------Color del link--------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.link {
+  color: $light-link;
+  text-decoration: none;
+  body.dark & {
+    color: $dark-link;
+  }
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------------Footer--------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+footer {
+  background: $light-wallpaper-footer;
+  color: $dark-titulo;
+  padding: 10px 0px;
+  text-align: center;
+  width: 100%;
+  body.dark & {
+    background: $dark-wallpaper-footer;
+  }
+}
+/*footer #menu-footer{
+  position: sticky;
+  bottom: 0;
+}*/

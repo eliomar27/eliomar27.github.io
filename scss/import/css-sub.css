@@ -1,0 +1,144 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+header{
+	background-color: #ff8c00;
+}
+body{
+    background: url(Fondo.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-blend-mode: difference;
+}
+
+#numeroseg {
+	margin-left : 5px;
+	color : #F70808;
+}
+#numeroseg:hover{
+    font-size: 200%;
+    transition: 1s;
+}
+.img:hover,img:hover {
+	transform : rotate(360deg);
+    width: 400px;
+    height: 300px;
+}
+.img, img {
+	transition-property : transform;
+	transition-duration : 3s;
+	transition-timing-function : cubic-bezier(1.000,-0.500,0.000,1.000);
+	transition-delay : 2s;
+    transition: 2s;
+}
+header img{
+	width : 100px;
+	height: 100px;
+	margin : 10px;
+}
+.left{
+    float: left; width: 300px; height: 200px; margin: 10px;
+}
+.right{
+    float: right; width: 300px; height: 200px; margin: 10px;
+}
+
+#titulo2 {
+	float: right;/*esta es la que se usa para poner el titulo al nivel de la imagen*/
+	margin-right : 50%;
+    margin-top: 25px;
+    
+}
+#ci {
+    margin: auto;
+    width: 500px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul, ol {
+    list-style: none;
+}
+nav {
+	background : #FF6A00;
+	height : 30px;
+}
+.nav li a {
+    background-color:#ff6a00;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+	box-shadow: 0 1px 3px hsla(0,0%,0%,0.5);/*EL EFECTO DE RESALTADO DEL MENU SE PONE CON ESTO*/
+	margin: 2px;
+}
+.nav li a:hover {
+    background-color: #ffd800;
+}
+.nav > li {
+    float: left;
+}
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 100PX;
+}
+.nav li:hover > ul {
+    display: block;
+}
+.nav li ul li {
+    position: relative;
+}
+.nav li ul li ul {
+    text-align:center;
+    right: -115px;
+    top: 0px;
+}
+.titulo {
+    font-size: 1em;
+    width: auto;
+	height: auto;
+    color: #ffffff;
+    text-align: center;
+}
+.articles {
+    width: 66%;
+    float: left;
+    margin:1.5%;  
+    text-align: justify;
+    
+}
+aside{  
+    width:29%;
+    float:left;
+    margin:1%;
+    padding:20px;
+    box-sizing:border-box;
+    text-align: justify;
+}
+aside article{
+    padding:20px;
+    margin-bottom:30px;
+    background:#ffd800;
+    width:auto;
+    height:auto;
+
+}
+ article{
+    padding:20px;
+    background:#ff6a00;
+    margin-bottom:20px;
+}
+h3 {
+    background: #ffd800;
+    font-weight: 800;
+    text-align: center;
+}
+footer{
+    background:#000000;
+    color:#ffffff;
+    clear:both;
+    padding:10px 0px;
+    text-align:center;
+}
