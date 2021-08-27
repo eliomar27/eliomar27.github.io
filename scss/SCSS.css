@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
-------------------------------------------Importar css------------------------------------------------------
+----------------------------------------Import------------------------------------------------  -----
 //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-@import url(import/class.css);
+@import url(import/normalize.css);
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
 ------------------------------------------Estilo Claro------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -12,6 +12,18 @@
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
 -----------------------------------Estilos Constantes-------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////
+-------------Espacio entre letras y lineas--------------------------
+///////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////
+-------------Tiempo de Transiciones--------------------------
+///////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////
+-------------------------Opacity-------------------------------------
+///////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////
+-------------------------Border Radius-------------------------------
+///////////////////////////////////////////////////////////////////*/
 * {
   margin: 0;
   padding: 0;
@@ -53,12 +65,12 @@ html body.dark {
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
---------------------------------------Estilo pagina 404----------------------------------------------------------
+----------------------Estilo pagina 404----------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 article {
   height: 79.4vh;
   /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
---------------------------------------Estilo de paginas y contacto----------------------------------------------------------
+----------------------Estilo de paginas y contacto----------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
   text-align: center;
 }
@@ -118,9 +130,6 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
------------------------------------Botón de Oscurecer--------------------------------------------------------
-//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 }
 
 .dark nav {
@@ -150,88 +159,12 @@ nav a:hover {
   background: #1d2f3d;
   color: #f3ba00;
   text-shadow: 2px 2px 6px #1d2f3d;
-  -webkit-transition: 0.5s ease all;
-  transition: 0.5s ease all;
 }
 
 body.dark nav a:hover {
   background: #c9d1d9;
   color: #161b22;
   text-shadow: 2px 2px 6px #161b22;
-}
-
-nav .switch {
-  background: #343d5b;
-  border-radius: 1000px;
-  margin-top: 20px;
-  border: none;
-  height: 30px;
-  width: 60px;
-  position: relative;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  outline: none;
-}
-
-nav .switch::after {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  background: #ffffff;
-  top: 0;
-  left: 0;
-  right: unset;
-  border-radius: 100px;
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
-  -webkit-box-shadow: 0px 0px 2px 2px black;
-          box-shadow: 0px 0px 2px 2px black;
-}
-
-nav .switch.active {
-  background: #ffffff;
-}
-
-nav .switch.active::after {
-  right: 0;
-  left: unset;
-}
-
-nav .switch span {
-  line-height: 30px;
-  display: block;
-  background: none;
-}
-
-nav .switch span img {
-  width: 30px;
-  height: 30px;
-}
-
-/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
-------------------------------------------Back to Top-------------------------------------------------------------
-//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-#scroll-back-to-top {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  left: 92.5%;
-  top: 80%;
-  font-size: 60px;
-  position: fixed;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  color: #1d2f3d;
-}
-
-body.dark #scroll-back-to-top {
-  color: #c9d1d9;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -241,6 +174,9 @@ main {
   min-height: 100vh;
   /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
 ------------------------------------------Articuló----------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------Pasatiempos--------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 }
 
@@ -283,11 +219,18 @@ body.dark main aside a {
   color: #58a6ff;
 }
 
+main aside a:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 main h2 {
   color: #000000;
   font-weight: normal;
   padding-top: 40px;
   font-size: 30px;
+  letter-spacing: 2px;
+  line-height: 40px;
 }
 
 body.dark main h2 {
@@ -297,6 +240,8 @@ body.dark main h2 {
 main i {
   font-size: 17px;
   color: #4b4b4b;
+  letter-spacing: 1px;
+  line-height: 30px;
 }
 
 body.dark main i {
@@ -308,22 +253,62 @@ main p {
   margin-bottom: 10px;
   line-height: 20px;
   color: #252525;
+  letter-spacing: 1px;
+  line-height: 30px;
 }
 
 body.dark main p {
   color: #8b949e;
 }
 
-/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
-----------------------------------------Color del link--------------------------------------------------------------
-//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-.link {
-  color: #0044ff;
-  text-decoration: none;
+main section ul {
+  list-style: none;
 }
 
-body.dark .link {
+main section ul li a {
+  margin: 2px;
+  font-size: 20px;
+  color: #0044ff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 30px 10px 25px;
+  height: 50px;
+  width: 200px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body.dark main section ul li a {
   color: #58a6ff;
+}
+
+main section ul li a:hover {
+  display: inline-block;
+  padding: 10px 30px 10px 25px;
+  color: #f3ba00;
+  background: #1d2f3d;
+  text-align: center;
+  border-radius: 7.5%;
+}
+
+main section ul li a:hover ~ img {
+  width: 700px;
+  height: 200px;
+  margin-left: 20px;
+  opacity: 1;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+---------------------Imágenes de index-------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+img {
+  /* transform : rotate(0deg);*/
+  width: 1366px;
+  height: 500px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 0;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -345,4 +330,270 @@ body.dark footer {
   position: sticky;
   bottom: 0;
 }*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------Estilo por clases---------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+--------------------------------------Animación de pasatiempo----------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.img-pasatiempo-1 {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.img-pasatiempo-2 {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  margin: -54px 0px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.img-pasatiempo-3 {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  margin: -108px 0px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.contenedor {
+  max-width: 2000px;
+  width: 85%;
+  margin: auto;
+  height: 5%;
+  /*ponerlos en horizontal*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*justify-content: space-between;*/
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+---------------------Imágenes de pagina autor--------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.img-articulo {
+  width: 100%;
+  height: 100%;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+---------------------------------Slider--------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.slider {
+  margin: auto;
+  overflow: hidden;
+  height: 500px;
+  max-width: 1166px;
+  max-height: 500px;
+  margin: auto;
+}
+
+.slides {
+  width: 500%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* overflow::hidden;*/
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  -webkit-transition: 4s ease-out all;
+  transition: 4s ease-out all;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -80%;
+}
+
+#radio6:checked ~ .first {
+  margin-left: -100%;
+}
+
+#radio7:checked ~ .first {
+  margin-left: -120%;
+}
+
+#radio8:checked ~ .first {
+  margin-left: -140%;
+}
+
+#radio9:checked ~ .first {
+  margin-left: -160%;
+}
+
+#radio10:checked ~ .first {
+  margin-left: -180%;
+}
+
+/*css for automatic navigation*/
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #40d3dc;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #40d3dc;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #40d3dc;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #40d3dc;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+  background: #40d3dc;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6 {
+  background: #40d3dc;
+}
+
+#radio7:checked ~ .navigation-auto .auto-btn7 {
+  background: #40d3dc;
+}
+
+#radio8:checked ~ .navigation-auto .auto-btn8 {
+  background: #40d3dc;
+}
+
+#radio9:checked ~ .navigation-auto .auto-btn9 {
+  background: #40d3dc;
+}
+
+#radio10:checked ~ .navigation-auto .auto-btn10 {
+  background: #40d3dc;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Back to Top-------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#scroll-back-to-top {
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 92.5%;
+  top: 80%;
+  font-size: 60px;
+  position: fixed;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  color: #1d2f3d;
+}
+
+body.dark #scroll-back-to-top {
+  color: #c9d1d9;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+-----------------------------------Botón de Oscurecer--------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.switch {
+  background: #343d5b;
+  border-radius: 1000px;
+  margin-top: 20px;
+  border: none;
+  height: 30px;
+  width: 60px;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #ffffff;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 1000px;
+  -webkit-transition: 0.3 ease-out all;
+  transition: 0.3 ease-out all;
+  -webkit-box-shadow: 0px 0px 2px 2px black;
+          box-shadow: 0px 0px 2px 2px black;
+}
+
+.switch.active {
+  background: #ffffff;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  line-height: 30px;
+  display: block;
+  background: none;
+}
+
+.switch span img {
+  width: 30px;
+  height: 30px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------------Color del link------------------------------------------------  -----
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.link {
+  color: #0044ff;
+  text-decoration: none;
+}
+
+body.dark .link {
+  color: #58a6ff;
+}
 /*# sourceMappingURL=SCSS.css.map */
