@@ -52,7 +52,6 @@ const btnswitch = document.querySelector('#switch');
                 localStorage.setItem('dark-mode', 'false');
               }
 });
-
 //obtener el modo actual.
 if(localStorage.getItem('dark-mode') ==='true'){
   document.body.classList.add('dark');
