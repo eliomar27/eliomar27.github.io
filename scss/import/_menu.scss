@@ -1,0 +1,38 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+---------------------------------------Barra de Menu--------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+nav {
+  z-index: 1;
+  background: $light-wallpaper-menu;
+  position: sticky;
+  top: 0;
+  .dark & {
+    background: $dark-wallpaper-menu;
+  }
+  a {
+    text-decoration: none;
+    color: $light-menu-a;
+    display: inline-block;
+    border-radius: $border-radius-menu;
+    margin: 2px;
+    padding: 20px;
+    font-size: $text-menu;
+    /* border: 1px solid aqua;*/
+    width: 100%;
+    text-align: center;
+    transition: $transition-nav;
+    body.dark & {
+      color: $dark-menu-a;
+    }
+  }
+  a:hover {
+    background: $light-wallpaper-menu-hover;
+    color: $light-menu-a;
+    text-shadow: $light-sombra-menu;
+    body.dark & {
+      background: $dark-wallpaper-menu-hover;
+      color: $dark-wallpaper-menu;
+      text-shadow: $dark-sombra-menu;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Estilo Claro------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+$light-wallpaper-body-top: #37e8fc;
+$light-wallpaper-body-bottom: #1d2f3d;
+$light-wallpaper-menu: #fafafa;
+$light-wallpaper-menu-hover: #1d2f3d;
+$light-wallpaper-switch: #343d5b;
+$light-wallpaper-button-ico: #1d2f3d;
+$light-wallpaper-aside: #1d2f3d;
+$light-wallpaper-footer: #1d2f3d;
+$light-titulo: #000000;
+$light-fecha: #4b4b4b;
+$light-p: #252525;
+$light-menu-a: #f3ba00;
+$light-aside-a: #f3ba00;
+$light-sombra-menu: 2px 2px 6px #1d2f3d;
+$light-link: #0044ff;
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Estilo Oscuro-----------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+$dark-wallpaper-body-top: #1d2733;
+$dark-wallpaper-body-bottom: #142030;
+$dark-wallpaper-menu: #161b22;
+$dark-wallpaper-menu-hover: #c9d1d9;
+$dark-wallpaper-switch: #ffffff;
+$dark-wallpaper-button-ico: #c9d1d9;
+$dark-wallpaper-aside: #21262d;
+$dark-wallpaper-footer: #161b22;
+$dark-titulo: #c9d1d9;
+$dark-fecha: #4e555f;
+$dark-p: #8b949e;
+$dark-menu-a: #c9d1d9;
+$dark-aside-a: #58a6ff;
+$dark-sombra-menu: 2px 2px 6px #161b22;
+$dark-link: #58a6ff;
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+-----------------------------------Estilos Constantes-------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+$switch-circle: #ffffff;
+$text-menu: 30px;
+$text-aside-titulo: 30px;
+$text-aside-a: 20px;
+$text-p: 20px;
+$text-fecha: 17px;
+$text-titulo: 30px;
+$text-back-to-top: 60px;
+/*///////////////////////////////////////////////////////////////////
+-------------Espacio entre letras y lineas--------------------------
+///////////////////////////////////////////////////////////////////*/
+$letter-spacing-titulo: 2px;
+$line-height-titulo: 40px;
+$letter-spacing-fecha: 1px;
+$line-height-fecha: 30px;
+$letter-spacing-p: 1px;
+$line-height-p: 30px;
+/*///////////////////////////////////////////////////////////////////
+-------------Tiempo de Transiciones--------------------------
+///////////////////////////////////////////////////////////////////*/
+$transition-body: 0.5s ease all;
+$transition-nav: 0.3 ease-out all;
+$transition-switch: 0.3 ease-out all;
+$transition-pasatiempo: 1s;
+$transition-pasatiempo-img: 2s;
+$transition-slide: 4s ease-out all;
+/*///////////////////////////////////////////////////////////////////
+-------------------------Opacity-------------------------------------
+///////////////////////////////////////////////////////////////////*/
+$opacity-on: 0;
+$opacity-off: 1;
+/*///////////////////////////////////////////////////////////////////
+-------------------------Border Radius-------------------------------
+///////////////////////////////////////////////////////////////////*/
+$border-radius-menu: 5px;
+$border-radius-aside: 5%;
+$border-radius-pasatiempo: 7.5%;
+$border-radius-switch: 1000px;

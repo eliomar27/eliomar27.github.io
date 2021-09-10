@@ -1,0 +1,39 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Aside-------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+aside {
+  min-width: 200px;
+  margin: 40px 20px 20px 0;
+  height: 100%;
+  background: $light-wallpaper-aside;
+  padding: 20px;
+  border-radius: $border-radius-aside;
+  position: sticky;
+  top: 40px;
+  body.dark & {
+    background: $dark-wallpaper-aside;
+  }
+  h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-size: $text-aside-titulo;
+    margin-bottom: 5x;
+    text-align: justify;
+    color: $dark-titulo;
+    font-weight: normal;
+    padding: 0px 0px 20px 0px;
+  }
+  a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: $light-aside-a;
+    font-size: $text-aside-a;
+    body.dark & {
+      color: $dark-aside-a;
+    }
+    &:hover {
+      text-decoration-line: underline;
+    }
+  }
+}

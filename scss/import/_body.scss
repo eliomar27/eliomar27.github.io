@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arvo", serif;
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+  --------------------------------Suaviza transiciones de link internos---------------------------------------
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+html {
+  scroll-behavior: smooth;
+  /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ------------------------------------------Body----------------------------------------------------------
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  body {
+    position: sticky;
+    top: 10px;
+    transition: $transition-body;
+    height: 100vh;
+    background: radial-gradient(
+        ellipse at top,
+        $light-wallpaper-body-top,
+        transparent
+      ),
+      radial-gradient(
+        ellipse at bottom,
+        $light-wallpaper-body-bottom,
+        transparent
+      );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-blend-mode: difference;
+    &.dark {
+      background: radial-gradient(
+        ellipse at top,
+        $dark-wallpaper-body-top,
+        $dark-wallpaper-body-bottom
+      );
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-blend-mode: difference;
+    }
+  }
+}

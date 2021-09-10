@@ -1,0 +1,44 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Articuló----------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+main {
+  min-height: 100vh;
+  h2 {
+    color: $light-titulo;
+    font-weight: normal;
+    padding-top: 40px;
+    font-size: $text-titulo;
+    letter-spacing: $letter-spacing-titulo;
+    line-height: $line-height-titulo;
+    body.dark & {
+      color: $dark-titulo;
+    }
+  }
+  i {
+    font-size: $text-fecha;
+    color: $light-fecha;
+    letter-spacing: $letter-spacing-fecha;
+    line-height: $line-height-fecha;
+    body.dark & {
+      color: $dark-fecha;
+    }
+  }
+  p {
+    font-size: $text-p;
+    margin-bottom: 10px;
+    line-height: 20px;
+    color: $light-p;
+    letter-spacing: $letter-spacing-p;
+    line-height: $line-height-p;
+    body.dark & {
+      color: $dark-p;
+    }
+  }
+}
+.link {
+  color: $light-link;
+  text-decoration: none;
+  body.dark & {
+    color: $dark-link;
+  }
+}

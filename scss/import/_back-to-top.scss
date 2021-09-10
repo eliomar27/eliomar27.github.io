@@ -1,0 +1,17 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------Back to Top-------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#scroll-back-to-top {
+  background: none;
+  border: none;
+  display: flex;
+  left: 92.5%;
+  top: 80%;
+  font-size: $text-back-to-top;
+  position: fixed;
+  transform: rotate(-90deg);
+  color: $light-wallpaper-button-ico;
+  body.dark & {
+    color: $dark-wallpaper-button-ico;
+  }
+}
