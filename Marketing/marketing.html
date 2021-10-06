@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+          <a href="https://eliomar27.github.io/index.html">Inicio</a>
+          <a href="">Productos</a>
+          <a href="">Servicios</a>
+          <a href="">contacto</a>
+      </nav>
+    </header>
+    <div class="movie">
+      <div class="slider">
+        <div class="slide active">
+          <img src="img/0.webp" alt=""/>
+          <div class="info">
+            <h2>Medios Sociales</h2>
+            <p>Somos una empresa especializada en la difusion de campañas
+              publicitarias, tanto en medios electronicos como en medios 
+              convencionales, nos llena de orgullo saber que nuestros clientes 
+              nos eligen por nuestra excelencia y profesionalismo en el mercado...
+              </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/1.jpg" alt=""/>
+          <div class="info">
+            <h2>Eficiencia</h2>
+            <p>Sabemos lo valioso que es su tiempo, por eso nos trabajamos incansablemente
+              para facilitar la comercializacion de sus productos y marcar a nivel nacional...
+              </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/2.jpg" alt=""/>
+          <div class="info">
+            <h2>El camino</h2>
+            <p>Como profesionales en la materia sabemos lo complicado y solitario de se puede sentir 
+              el camino a lograr sus metas por eso estamos aqui para ofrecerle asesoramiento y compañía 
+              en la elaboracion de sus proyectos...
+              </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/3.jpg" alt=""/>
+          <div class="info">
+            <h2>El tiempo</h2>
+            <p>Sientes como el tiempo pasa y que no estas haciendo nada para aprovecharlo en iniciar tu negocio
+              unete a nosotros y juntos elaboremos un plan de accion para un futuro mas prospero y productivo  
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/4.jpg" alt=""/>
+          <div class="info">
+            <h2>Multiplataforma</h2>
+            <p>Ahora estamos presentes en todos tus dispositivos para que puedas realizar tus encargos desde la comodidad de tu 
+              hogar...
+              </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/5.jpg" alt=""/>
+          <div class="info">
+            <h2>Medios Sociales</h2>
+            <p>Visitenos en nuestras oficinas donde podra ser atendido por nuestro personal calificado...
+              </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/6.jpg" alt=""/>
+          <div class="info">
+            <h2>Radio</h2>
+            <p>No solo estamos presentes en espacios publicos y internet tambien contamos con alcance en medios convencionales como la radio o periodicos...
+              </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/7.jpg" alt=""/>
+          <div class="info">
+            <h2>Artistas</h2>
+            <p>Con nuestros artistas podras llegar a completar esas ideas inconclusas en las que tienes tiempo pensando 
+              </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/8.jpg" alt=""/>
+          <div class="info">
+            <h2>Plazos de entrega</h2>
+            <p>Nos adaptamos a su presupuesto y llevamos en control constanta sobre nuestros clientes y sus intereses 
+              </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/9.jpg" alt=""/>
+          <div class="info">
+            <h2>Problemas</h2>
+            <p>Nos encargamos de analizar y encontrar las mejores soluciones a sus dudad y Problemas
+              </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/10.jpg" alt=""/>
+          <div class="info">
+            <h2>Herramientas</h2>
+            <p>Contamos con todas las Herramientas necesarias para llevar a cabo nuestro trabajo con profesionalismo y eficiencia
+              </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/11.jpg" alt=""/>
+          <div class="info">
+            <h2>Contacto</h2>
+            <p>Contactenos desde la comodidad de donde se encuentre gracias o nuestra amplia red de opciones que le ofrecemos a usted...
+              </p>
+          </div>
+        </div>
+        <div class="navigation">
+          <i class="prev-btn"><img src="svg/arrow_back_ios_black_24dp.svg" alt=""></i>
+          <i class="next-btn"><img src="svg/arrow_forward_ios_black_24dp.svg" alt=""></i>
+        </div>
+        <div class="navigation-visibility">
+          <div class="slide-icon active"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+        </div>
+      </div>
+      </body>
+    <script type="text/javascript">
+  const slider = document.querySelector(".slider");
+  const nextBtn = document.querySelector(".next-btn");
+  const prevBtn = document.querySelector(".prev-btn");
+  const slides = document.querySelectorAll(".slide");
+  const slideIcons = document.querySelectorAll(".slide-icon");
+  const numberOfSlides = slides.length;
+  var slideNumber = 0;
+  
+  //image slider next button
+  nextBtn.addEventListener("click", () => {
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    slideIcons.forEach((slideIcon) => {
+      slideIcon.classList.remove("active");
+    });
+  
+    slideNumber++;
+  
+    if(slideNumber > (numberOfSlides - 1)){
+      slideNumber = 0;
+    }
+  
+    slides[slideNumber].classList.add("active");
+    slideIcons[slideNumber].classList.add("active");
+  });
+  
+  //image slider previous button
+  prevBtn.addEventListener("click", () => {
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    slideIcons.forEach((slideIcon) => {
+      slideIcon.classList.remove("active");
+    });
+  
+    slideNumber--;
+  
+    if(slideNumber < 0){
+      slideNumber = numberOfSlides - 1;
+    }
+  
+    slides[slideNumber].classList.add("active");
+    slideIcons[slideNumber].classList.add("active");
+  });
+  
+  //image slider autoplay
+  var playSlider;
+  
+  var repeater = () => {
+    playSlider = setInterval(function(){
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+  
+      slideNumber++;
+  
+      if(slideNumber > (numberOfSlides - 1)){
+        slideNumber = 0;
+      }
+  
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    }, 10000);
+  }
+  repeater();
+  
+  //stop the image slider autoplay on mouseover
+  slider.addEventListener("mouseover", () => {
+    clearInterval(playSlider);
+  });
+  
+  //start the image slider autoplay again on mouseout
+  slider.addEventListener("mouseout", () => {
+    repeater();
+  });
+  </script>  
+</html>
