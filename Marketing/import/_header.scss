@@ -1,0 +1,22 @@
+nav {
+  background: $Wallpaper-nav;
+  min-width: $min-width-nav;
+  height: $height-nav;
+  text-align: center;
+  background: $Wallpaper-nav;
+
+  a {
+    display: inline-block;
+    font-size: $font-size-nav;
+    text-decoration-line: none;
+    margin-right: $margin-right-nav;
+    margin-top: $margin-top-nav;
+    margin-bottom: $margin-bottom-nav;
+    color: $text-color-nav-a;
+    padding: $padding-nav;
+
+    &:hover {
+      color: $hover-nav;
+    }
+  }
+}

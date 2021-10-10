@@ -1,0 +1,263 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------Mixin----------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------*/
+/*fondo blanco con letras transparentes*/
+/*----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------variables-------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------*/
+/*Body*/
+/*Div*/
+/*Img*/
+/*Articulo*/
+/*::selection*/
+/*Button*/
+/*H2*/
+body {
+  background: #000a55;
+  font-size: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100hv;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ffe100));
+  background-image: linear-gradient(#eee, #ffe100);
+}
+
+body div {
+  background: url(677724.jpg);
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 2%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-blend-mode: difference;
+  /*  @include animacion();*/
+}
+
+body div i {
+  /*display: flex;
+            flex-direction: column;
+            align-items: center;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body div i img {
+  /* position: absolute;*/
+  width: 70%;
+  -webkit-animation: spin 20s linear infinite;
+  /* Safari */
+  animation: spin 20s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+body div article {
+  text-align: center;
+  margin: 20px;
+  color: white;
+  /*Espacio entre lineas*/
+  line-height: 33px;
+  background: rgba(0, 29, 84, 0.645);
+  border-radius: 15px;
+  text-align: justify;
+  /*Para que funcione el lo que voy hacer con el after se necesita del relative*/
+  position: relative;
+  /*con after o before podemos poner elementos nuevos a la pagina antes de o despues de un elemento*/
+  /*Cambiar el css al seleccionar el texto*/
+}
+
+body div article::after {
+  /*Para agregar texto content*/
+  /*content: 'hola';*/
+  /*Para un elemento*/
+  content: '';
+  display: block;
+  height: 0px;
+  width: 0px;
+  border-top: 20px solid #00a3fa;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  /*el position absolute nor permite ponerlo donde queramos */
+  position: absolute;
+  /*con calc podemos hacer pequeñas operaciones*/
+  right: calc(50% - 20px);
+}
+
+body div article::-moz-selection {
+  background: #ff8400;
+  color: #ffe100;
+}
+
+body div article::selection {
+  background: #ff8400;
+  color: #ffe100;
+}
+
+body div article::first-line {
+  color: #aa01ff;
+}
+
+body div article::first-letter {
+  color: #ffabee;
+  font-size: 2.8em;
+  float: left;
+}
+
+body div button {
+  width: 100%;
+  background: #013161;
+  border: none;
+  height: 60px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+body div button a {
+  color: #eee;
+  font-size: 3em;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+body div h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: #0400ff;
+  font-size: 1.5em;
+  margin-top: 1%;
+  font-weight: bold;
+}
+
+body div h2::after {
+  content: '';
+  background: no-repeat url(language_black_48dp.svg);
+  background-size: 100%;
+  width: 70px;
+  height: 70px;
+  margin-left: 2%;
+}
+
+/*con @extend solo tines que copiar el nombre de otro elemento dea un div,clases o elemento(div,a,h2,img) y copia el css*/
+section, .cambiar {
+  background: url(7.jpg);
+  width: 100vh;
+  height: 50vh;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: 100% 100%;
+  /*  @include fondo();
+    */
+}
+
+section b, .cambiar b {
+  display: block;
+  background: #fff;
+  color: #000;
+  width: 50vh;
+  height: 40vh;
+  /*para que funcione tiene que estar el fondo blanco y letras negras*/
+  font-weight: bold;
+  mix-blend-mode: screen;
+  font-size: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*alineacion vertical*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*alineacion horizontal*/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 40px 20px 10px 30px;
+  align-items: center;
+}
+
+/*voltear un elemento*/
+.cambiar {
+  background: url(7.jpg);
+  background-size: 100% 100%;
+  /*  @include fondo();
+    */
+  -webkit-transform: scaley(-1);
+          transform: scaley(-1);
+}
+
+ol li::marker {
+  color: red;
+  font-size: 20px;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+/*# sourceMappingURL=style.css.map */

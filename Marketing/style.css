@@ -1,26 +1,15 @@
+@import url(normalize.css);
 /*-----------------Body--------------------*/
 /*-----------------Nav---------------------*/
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/*---------------------------------------------------------------------------------------
--------------------------------------Nav-------------------------------------------------
-----------------------------------------------------------------------------------------*/
-html body {
-  background: #0d42fa;
-}
-
-html body header nav {
+nav {
   background: #fff;
   min-width: 800px;
   height: 60px;
-  text-align: end;
+  text-align: center;
   background: #fff;
 }
 
-html body header nav a {
+nav a {
   display: inline-block;
   font-size: 30px;
   -webkit-text-decoration-line: none;
@@ -32,42 +21,166 @@ html body header nav a {
   padding: 7.5px;
 }
 
-html body header nav a:hover {
-  background: #01b8f5;
-  border-radius: 5%;
+nav a:hover {
+  color: #555;
 }
 
-/*Contiene el slider completo*/
-.movie {
-  height: 100vh;
+html body {
+  background: #0d42fa;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  overflow: hidden;
+  width: 100%;
+  /*max-width: 1200px;*/
+  /*  margin: 20px auto;*/
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  /*grid-template-rows: repeat(4,auto);*/
+  -ms-grid-rows: 70px 530px auto auto 60px 50px;
+      grid-template-rows: 70px 530px auto auto 60px 50px;
+}
+
+main div {
+  border-radius: 10px;
+}
+
+main #header {
+  /* background: rgb(0, 33, 104);
+        color: rgb(255, 255, 255); */
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: -1;
+  text-align: center;
+  border-radius: 0px;
+}
+
+main #contenido {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/ 3;
+  background: #fff;
+}
+
+main #contenido h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+main #contenido p {
+  margin: 20px;
+  text-align: justify;
+}
+
+main #aside {
+  background: #ff8502;
+  /*Centra texto*/
+  /* text-align: center;*/
+  /*display para poder usas flex*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  /*alineacion vertical*/
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #000116;
+  /*alineacion horizontal*/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*horizontal*/
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3/ 5;
+  /*o usar gri-row: span 2;*/
+  /*vertical*/
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+main #slider {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  overflow: hidden;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+main #slider .slider {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #widget {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  text-align: center;
+  background: #002168;
+  color: #fff;
+}
+
+main #articulo-1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  background: url(img/7.jpg);
+  background-repeat: no-repeat;
+}
+
+main #articulo-1 h2 {
+  text-align: center;
+}
+
+main #articulo-1 p {
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.508);
+  text-align: justify;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+main #footer {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  margin-bottom: 0;
 }
 
 .slider {
   position: relative;
-  background: #000116;
-  width: 1200px;
-  height: 470px;
-  min-height: 400px;
-  margin: auto;
-  margin-top: 5px;
+  height: 700px;
+  min-height: 500px;
   overflow: hidden;
-  border-radius: 10px;
+  background: url(img/Captura.JPG);
 }
 
 .slider .slide {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 80%;
   -webkit-clip-path: circle(0% at 0 50%);
           clip-path: circle(0% at 0 50%);
 }
@@ -90,14 +203,14 @@ html body header nav a:hover {
 .slider .slide .info {
   position: absolute;
   color: #222;
-  background: rgba(255, 255, 255, 0.829);
+  background: rgba(255, 255, 255, 0.3);
   width: 75%;
   margin-top: 50px;
   margin-left: 50px;
   padding: 20px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 5px 25px #010101;
-          box-shadow: 0 5px 25px #010101;
+  -webkit-box-shadow: 0 5px 25px #4286f4a8;
+          box-shadow: 0 5px 25px #4286f4a8;
 }
 
 .slider .slide .info h2 {
@@ -127,15 +240,16 @@ html body header nav a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   opacity: 0;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0s ease;
+  transition: opacity 0s ease;
 }
 
 .slider:hover .navigation {
   opacity: 1;
 }
 
-.prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
   z-index: 999;
   font-size: 2em;
   color: #222;
@@ -173,12 +287,12 @@ html body header nav a:hover {
           transform: translateY(-50px);
   margin: 0 6px;
   border-radius: 2px;
-  -webkit-box-shadow: 0 5px 25px #010101;
-          box-shadow: 0 5px 25px #010101;
+  -webkit-box-shadow: 0 5px 25px #4285F4;
+          box-shadow: 0 5px 25px #4285F4;
 }
 
 .navigation-visibility .slide-icon.active {
-  background: #4285F4;
+  background: #d1d5dc;
 }
 
 @media (max-width: 900px) {

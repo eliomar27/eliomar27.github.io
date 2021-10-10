@@ -3,50 +3,107 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 article {
   height: 79.4vh;
+
   section {
     text-align: center;
     margin-top: 2%;
+
     h1 {
       font-size: $text-back-to-top;
       margin: 20px;
+
       .dark & {
         color: $dark-titulo;
       }
     }
+
     p {
       font-size: $text-p;
       margin: 20px;
+
       .dark & {
         color: $dark-p;
       }
     }
+
     br {
       font-size: $text-fecha;
     }
   }
+
   /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
   ----------------------Estilo de paginas y contacto----------------------------------------------------------
   //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
   text-align: center;
+
   h1 {
     font-size: $text-back-to-top;
     margin: 15%;
     margin-bottom: 2.5%;
+
     .dark & {
       color: $dark-titulo;
     }
   }
+
   p {
     font-size: $text-p;
     margin-bottom: 15%;
+
     .dark & {
       color: $dark-p;
     }
   }
-  div{
-    img{
-      width: 800px;
+
+  div {
+    img {
+      margin: 50px;
+      width: 90vh;
       height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 5px 10px #000000a8;
+      transition: .5s;
+      body.dark & {
+        box-shadow: 0 5px 10px #4286f4a8;
+      }
+      &:hover {
+        width: 92vh;
+        height: 320px;
+
+      }
+    }
+  }
+}
+
+footer {
+  background: $light-wallpaper-footer;
+  color: $dark-titulo;
+  padding: 10px 0px;
+  text-align: center;
+  margin-top: 100px;
+  width: 100%;
+
+  body.dark & {
+    background: $dark-wallpaper-footer;
+  }
+}
+
+.article {
+  box-sizing: border-box;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px auto;
+
+  .pagina {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    font-size: 60px;
+    margin: 20px;
+
+    .dark & {
+      color: $dark-titulo;
     }
   }
 }
