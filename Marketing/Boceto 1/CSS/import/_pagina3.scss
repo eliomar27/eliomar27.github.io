@@ -1,0 +1,37 @@
+.pagina3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 252px);
+  grid-auto-rows: 252px;
+  //top right bottom left
+  margin: 20px 0px 20px 10px;
+  justify-content: space-evenly;
+  // grid-template-rows: masonry;
+  gap: 20px;
+  column-gap: 20px;
+  .pagina3-contenedor {
+    overflow: hidden;
+    border-radius: 5px;
+    &:hover {
+      .pagina3-categoria {
+        height: 70px;
+        transform: translate(0%, -70%);
+      }
+    }
+    .pagina3-imagen {
+      img {
+        width: 252px;
+        height: 252px;
+      }
+    }
+    .pagina3-categoria {
+      background: #000000cc;
+      width: 252px;
+      height: 150px;
+      text-align: center;
+      transform: translate(0%, -15%);
+      span {
+        color: #fff;
+      }
+    }
+  }
+}

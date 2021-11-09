@@ -1,0 +1,331 @@
+html {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    transition: all 1s ease;
+
+    .header {
+        opacity: $opacity-menu;
+        z-index: 998;
+        top: 0;
+        position: sticky;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        .svg {
+            margin-top: 5%;
+        }
+        .header-search {
+
+            button {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .switch {
+            @include switch-left;
+        }
+
+        .perfil {
+            @include switch-right;
+
+            &::after {
+                //    background: $switch-circle;
+                background-image: $img-perfil;
+                background-repeat: no-repeat;
+                background-size: 30px 30px;
+            }
+
+            &.active {
+
+                &::after {
+                    left: 0;
+                    right: unset;
+                }
+
+                .header-menu-desplegable {
+                    opacity: $opacity-on;
+                }
+            }
+            .header-menu-desplegable {
+                opacity: $opacity-off;
+                position: absolute;
+                margin-top: 35px;
+                border-radius: 0% 0% 10% 10%;
+
+                a {
+                    text-decoration: none;
+                    color: $color-7;
+                    &:hover {
+                        border-radius: 10%;
+                        text-shadow: 1px 1px 1px $color-6;
+                        
+                    }
+
+                    svg {
+                        @include svg-tamaño;
+                    }
+
+                    span {
+                        margin-top: 10px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .aside {
+        opacity: $opacity-menu;
+        z-index: 999;
+        list-style: none;
+        margin: 0;
+        overflow: hidden;
+        position: fixed;
+        height: 100vh;
+
+        .line-menu {
+            width: 50px;
+            height: 1px;
+            background: $color-4;
+        }
+
+        li {
+            z-index: 10;
+            background-color: $color-1;
+        }
+
+        li:hover {
+            //  background:$color-aside-li-hover ;
+            opacity: 0.4;
+            width: 49px;
+            height: 49px;
+
+            svg {
+                color: $color-7;
+            }
+        }
+
+        div {
+            z-index: 10;
+            background: $wallpaper-menu;
+        }
+
+        body.menu & {
+            width: $width-aside;
+
+            overflow: visible;
+
+            li:hover {
+                width: $width-aside-hover-active;
+                height: $height-aside-hover-active;
+
+                span {
+                    display: block;
+                    color: $color-a;
+                    margin-top: $margin-top-aside-span;
+                    margin-left: $margin-left-aside-span;
+                    font-size: $font-size-aside;
+                    width: $width-aside;
+
+                    b:hover {
+                        color: $hover-a;
+                    }
+                }
+            }
+
+            li {
+                backdrop-filter: blur(15px);
+                width: $width-aside-hover-active;
+
+                span {
+                    opacity: $opacity-on;
+                    color: $color-a;
+                    margin-top: $margin-top-aside-span;
+                    margin-left: $margin-left-aside-span;
+                    font-size: $font-size-aside;
+                    width: $width-aside;
+
+                    b:hover {
+                        color: $hover-a;
+                    }
+                }
+            }
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: $color-a;
+
+                    span:hover {
+                        color: $hover-a;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .main {
+        .articulos-main {
+            .secciones-main {
+                min-width: 550px;
+                margin-top: 10px;
+                border-radius: 20px;
+                background: #fff;
+
+                h2 {
+                    padding: 0px 0px 0px 10px;
+                }
+
+                div {
+                    margin-top: 10px;
+                    background: #fff;
+                    display: grid;
+                    grid-template-columns: repeat(3, auto);
+                    grid-template-rows: 20px;
+                    gap: 10px;
+
+                    a {
+                        text-align: center;
+                        height: 15px;
+                        text-decoration: none;
+                        border: #ccc solid 1px;
+                        border-radius: 5px;
+                        padding: 5px;
+                        background: #f5f5f5;
+                        color: #006eae;
+
+                        &:hover {
+                            text-decoration-line: underline;
+                        }
+                    }
+                }
+
+                i {
+                    color: $color-i;
+                    margin: 5px;
+                }
+
+                p {
+                    margin: auto;
+                    margin-right: -55px;
+                    text-align: justify;
+                    // margin: 10px;
+                }
+
+                img {
+                    margin: auto;
+                    float: right;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                button {
+                    font-size: 1.5em;
+                    padding: 5px;
+                    align-items: center;
+                    width: 200px;
+                    height: 40px;
+                    border-radius: 20px;
+                    background: $wallpaper-button-section;
+                    margin: 10px -50px 50px 5px;
+
+                    //border: none;
+                    &:hover {
+
+                        box-shadow: 5px 5px 20px 0px rgb(0, 110, 255),
+                            0px 0px 30px 5px rgb(0, 110, 255);
+                    }
+                }
+            }
+        }
+
+        /*
+        div {
+            border-radius: 15px;
+
+            //  border-radius: 0% 20% /20% 50%;
+            //  margin: 20px;
+            img {
+                border-radius: 15px;
+                width: 230px;
+                cursor: zoom-in;
+                object-fit: cover;
+                box-shadow: 2px 2px 2px $color-shadow;
+
+                &:hover {
+                    filter: opacity(.85);
+
+                }
+            }
+
+        }
+
+        div:nth-child(1) {
+            background: map-get($color-div, a);
+            border-radius: map-get($border-div, 1);
+        }
+
+        div:nth-child(2) {
+            border-radius: map-get($border-div, 2);
+            background: map-get($color-div, b);
+        }
+
+        div:nth-child(3) {
+            border-radius: map-get($border-div, 3);
+            background: map-get($color-div, c);
+        }
+
+        div:nth-child(4) {
+            border-radius: map-get($border-div, 4);
+            background: map-get($color-div, d);
+        }
+
+        div:nth-child(5) {
+            border-radius: map-get($border-div, 5);
+            background: map-get($color-div, e);
+        }
+
+        div:nth-child(6) {
+            border-radius: map-get($border-div, 6);
+            background: map-get($color-div, f);
+        }
+
+        div:nth-child(7) {
+            border-radius: map-get($border-div, 7);
+            background: map-get($color-div, g);
+        }
+
+        div:nth-child(8) {
+            border-radius: map-get($border-div, 8);
+            background: map-get($color-div, h);
+        }
+
+        div:nth-child(9) {
+            border-radius: map-get($border-div, 9);
+            background: map-get($color-div, i);
+        }
+
+        div:nth-child(10) {
+            border-radius: map-get($border-div, 10);
+            background: map-get($color-div, j);
+        }*/
+    }
+}
+
+.svg-color {
+    width: 50px;
+    height: 50px;
+}
+
+.header-menu-desplegable {
+    .header-desplegable.active & {
+        opacity: 0;
+    }
+}

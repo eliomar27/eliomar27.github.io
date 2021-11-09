@@ -1,0 +1,71 @@
+.aside {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+  border-right: #000000 solid 2px;
+  box-sizing: border-box;
+  height: 100vh;
+  position: fixed;
+  .header-menu {
+    svg {
+      margin: 0 auto;
+      height: 42px;
+      width: 42px;
+    }
+    span {
+      display: none;
+    }
+  }
+  .header-line {
+    margin-top: -2px;
+    border-top: rgb(0, 0, 0) solid 2px;
+    box-sizing: border-box;
+    width: 100%;
+    background: rgb(0, 127, 253);
+  }
+  li {
+    display: flex;
+
+    a {
+      svg {
+        height: 42px;
+        width: 42px;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+  body.menu & {
+    width: 200px;
+    z-index: 999;
+    background: rgb(255, 255, 255);
+    transition: width 0.5s;
+    will-change: width;
+    .header-menu {
+      svg {
+        margin-left: 0px;
+      }
+      span {
+        margin-top: 5px;
+        display: block;
+        position: absolute;
+        margin-left: 42px;
+        font-size: 1.5em;
+      }
+    }
+    li {
+      display: flex;
+      a {
+        svg {
+        }
+        span {
+          //top right bottom left
+          margin: -42px 0px 0px 42px;
+          font-size: 1.5em;
+          position: absolute;
+          display: block;
+        }
+      }
+    }
+  }
+}

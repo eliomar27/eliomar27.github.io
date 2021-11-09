@@ -1,0 +1,39 @@
+.login {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  .login-main {
+    grid-column: 2;
+    margin-top: 10vh;
+    fieldset {
+      width: 300px;
+      height: 300px;
+      border-radius: 10px;
+      border: #999 solid 2px;
+      legend {
+        margin: 0 auto;
+      }
+      input {
+        width: 90%;
+        margin: 5%;
+      }
+      #email {
+      }
+      #password {
+      }
+      a {
+        button {
+          @extend input;
+          span {
+            font-size: 1em;
+          }
+        }
+      }
+      .login-registro {
+        display: block;
+        text-align: center;
+        text-decoration-line: none;
+        -moz-text-decoration-line: none;
+      }
+    }
+  }
+}

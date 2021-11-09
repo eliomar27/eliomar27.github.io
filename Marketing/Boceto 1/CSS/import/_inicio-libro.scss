@@ -1,0 +1,26 @@
+.libro {
+    article {
+      section {
+      }
+      .media-section {
+        h2 {
+          text-align: center;
+          padding: 5px;
+        }
+        h3 {
+          margin-left: 2%;
+          padding: 5px;
+          text-decoration-line: underline;
+          -moz-text-decoration-line: underline;
+          &::after{
+              content: ":";
+          }
+        }
+        p {
+          margin-left: 2%;
+          padding: 5px;
+          text-align: justify;
+        }
+      }
+    }
+  }

@@ -58,7 +58,7 @@ article {
   div {
     img {
       margin: 50px;
-      width: 90vh;
+      width: 90%;
       height: 300px;
       object-fit: cover;
       border-radius: 20px;
@@ -93,7 +93,7 @@ footer {
   box-sizing: border-box;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 100px auto;
 
   .pagina {

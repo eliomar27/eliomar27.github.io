@@ -1,0 +1,60 @@
+@media screen and (max-width: 900px) {
+  .menu {
+    nav {
+      ol {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+        .logo {
+          grid-column: 1 / span 1;
+        }
+
+        .inicio {
+          grid-column: auto;
+        }
+
+        .mision {
+          grid-column: auto;
+        }
+
+        .contacto {
+          grid-column: auto;
+        }
+
+        .login {
+          grid-column: auto;
+        }
+
+        li {
+          svg {
+            position: absolute;
+            width: $height-menu;
+            height: $height-menu;
+            border-radius: 10px;
+            color:$text-color-menu;
+            width: 80px;
+            &:hover {
+              color: $text-color-menu-hover;
+            }
+          }
+
+          a {
+            text-decoration-line: none;
+
+            svg {
+              position: absolute;
+              //opacity: $opacity-on;
+              display: block;
+            }
+
+            h4 {
+              font-family: "Noto Sans Mono", monospace;
+              font-size: $text-font-size-menu;
+              color: $text-color-menu;
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

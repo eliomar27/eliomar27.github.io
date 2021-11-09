@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap");
+@import url("https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Apanorama_fish_eye%3A");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans Mono", monospace;
+}
+
+body {
+  background: #000b22;
+}
+
+body main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+body main fieldset {
+  min-width: 400px;
+  max-width: 600px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  border-radius: 10px;
+  border: #0051ff solid 6px;
+  -webkit-box-shadow: 2px 2px 20px #0051ff;
+          box-shadow: 2px 2px 20px #0051ff;
+  margin-top: 5vh;
+  height: 90vh;
+  color: #40e0d0;
+  background: transparent;
+}
+
+body main fieldset legend {
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+body main fieldset input {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  width: 90%;
+  margin-top: 40px;
+  border: 1px solid #0051ff;
+  border-radius: 5px;
+  padding: 12px;
+  background-color: transparent;
+  color: #40e0d0;
+  font-size: 1em;
+  font-weight: 1000;
+}
+
+body main fieldset input:hover {
+  border: 1px solid #0051ff;
+  -webkit-box-shadow: inset 0 0 5px 1px #0051ff;
+          box-shadow: inset 0 0 5px 1px #0051ff;
+}
+
+body main fieldset input:active {
+  border: 1px solid #0051ff;
+  -webkit-box-shadow: inset 0 0 5px 1px #0051ff;
+          box-shadow: inset 0 0 5px 1px #0051ff;
+}
+
+body main fieldset button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  background: #0051ff;
+  color: #40e0d0;
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  height: 30px;
+}
+
+body main fieldset button:hover {
+  background: #004aeb;
+}
+/*# sourceMappingURL=login.css.map */

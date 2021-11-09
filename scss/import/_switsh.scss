@@ -1,6 +1,11 @@
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
 -----------------------------------Botón de Oscurecer--------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+$transition-switch: 0.3 ease-out all;
+$border-radius-switch: 1000px;
+$dark-wallpaper-switch: #ffffff;
+$light-wallpaper-switch: #343d5b;
+$switch-circle: #ffffff;
 .switch {
   background: $light-wallpaper-switch;
   border-radius: $border-radius-switch;

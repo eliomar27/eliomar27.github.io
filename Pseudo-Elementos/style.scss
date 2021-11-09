@@ -42,6 +42,31 @@
     background-blend-mode: difference;
 }
 
+@mixin button($button-media) {
+    display: inline-block;
+    text-decoration: none;
+    padding: .5em 1em;
+    width: 100%;
+    height: 200px;
+
+    &:hover {
+        display: inline-block;
+        text-decoration: none;
+        padding: .5em 1em;
+        width: 100%;
+        height: 200px;
+    }
+
+    @media screen and (min-width:$button-media) {
+        background: rgb(26, 26, 26);
+        display: inline-block;
+        text-decoration: none;
+        padding: .5em 1em;
+        width: 100%;
+        height: 200px;
+    }
+}
+
 /*----------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------variables-------------------------------------------------------------------
@@ -172,11 +197,11 @@ body {
             height: $button-height;
             border-radius: $button-border-radius;
             display: inline-block;
-          
-            a{
-                 color: $button-color;
-            font-size: $button-font-size; 
-            text-decoration-line: none;
+
+            a {
+                color: $button-color;
+                font-size: $button-font-size;
+                text-decoration-line: none;
             }
         }
 
@@ -218,7 +243,6 @@ section {
     */
     b {
         display: block;
-
         background: #fff;
         color: #000;
         width: 50vh;
@@ -234,7 +258,6 @@ section {
         align-items: center;
     }
 }
-
 /*voltear un elemento*/
 .cambiar {
     @extend section;
@@ -252,6 +275,85 @@ ol {
             font-size: 20px;
             transform: rotate(360deg);
 
+        }
+    }
+}
+
+.button {
+    @include button(1000px);
+}
+
+.subscribir {
+    @include button(800px);
+}
+
+$bp:(m: 640px,
+    l:1024px);
+
+/*-----------------Ciclo for con sass----------------*/
+/*-----------------Ejemplo 1      -------------------*/
+@for $i from 1 through 20 {
+    .cols-#{$i} {
+        width: $i * 1%;
+    }
+}
+
+/*--------------------------------------------------*/
+/*-----------------Ejemplo 2      -------------------*/
+@for $i from 1 through 20 {
+    .cols-#{$i * 5} {
+        width: $i * 5%;
+    }
+}
+
+/*--------------------------------------------------*/
+/*-----------------Ejemplo 3      -------------------*/
+@for $i from 1 through 20 {
+    .cols-#{$i * 5} {
+        width: $i * 5%;
+    }
+
+    @media screen and (min-width: map-get($bp, m)) {
+        .cols-m-#{$i * 5} {
+            width: $i * 5%;
+        }
+    }
+}
+
+/*-----------------Ejemplo 4      -------------------*/
+@for $i from 1 through 20 {
+    .cols-#{$i * 5} {
+        width: $i * 5%;
+    }
+    @media screen and (min-width: map-get($bp, l)) {
+        .cols-l-#{$i * 5} {
+            width: $i * 5%;
+        }
+    }
+}
+/*-----------------Ejemplo 5      -------------------*/
+@for $i from 1 through 20 {
+    .cols-#{$i * 5} {
+        width: $i * 5%;
+    }
+}
+@media screen and (min-width: map-get($bp, l)) {
+    @for $i from 1 through 20 {
+        .cols-l-#{$i * 5} {
+            width: $i * 5%;
+        }
+    }
+}
+/*-----------------Ejemplo 6      -------------------*/
+@for $i from 1 through 20 {
+    .cols-#{$i * 5} {
+        width: $i * 5%;
+    }
+}
+@media screen and (min-width: map-get($bp, m)) {
+    @for $i from 1 through 20 {
+        .cols-m-#{$i * 5} {
+            width: $i * 5%;
         }
     }
 }

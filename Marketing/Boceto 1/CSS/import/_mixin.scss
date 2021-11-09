@@ -1,0 +1,84 @@
+@mixin fondo {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-blend-mode: difference;
+}
+@mixin imagenes {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background: cover;
+}
+@mixin cutout-text {
+  /*para que funcione tiene que estar el fondo blanco y letras negras*/
+  font-weight: bold;
+  mix-blend-mode: screen;
+}
+@mixin switch-left {
+  //wallpaper sol
+  background: #00a1f8;
+  border-radius: 50px;
+  border: none;
+  height: 15px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  box-sizing: border-box;
+  &::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(0%, -20%);
+    transition: 0.3 ease-out all;
+    background: #ffffff url(svg/sun.svg) no-repeat 50%;
+    border: #00a1f8 solid 2px;
+  }
+  &.active {
+    //wallpaper luna
+    background: #094977;
+    transform: translate(0%, 0%);
+    &::after {
+      background: #010041 url(svg/moon.svg) no-repeat 50%;
+      transform: translate(45%, -20%);
+      background-position-x: 4px;
+      border: #094977 solid 2px;
+    }
+  }
+}
+@mixin switch-right {
+  border-radius: 50px;
+  height: 20px;
+  width: 50px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  background: #094977 url(svg/expand_more_black_24dp.svg) no-repeat;
+  background-position-x: 26px;
+  background-position-y: -1px;
+  &::after {
+    content: "El";
+    color: #ffffff;
+    text-align: center;
+    background: #010041;
+    font-size: 20px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(0%, -10%);
+    border-radius: 50px;
+    transition: 0.3 ease-out all;
+    box-sizing: border-box;
+    border: #02007e solid 1px;
+  }
+  &.active {
+    .header-menu-desplegable {
+      display: block;
+    }
+  }
+}

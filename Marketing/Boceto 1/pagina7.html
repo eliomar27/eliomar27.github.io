@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="SVG/south_america_black_24dp.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <link rel="stylesheet"
+        href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Aaccount_circle%3A" />
+</head>
+
+<body>
+    <div class="contenedor-pagina">
+        <header class="header">
+            <!--svg logo-->
+            <div class="header-logo">
+                <a href="pagina1.html">
+                    <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                        width="24px" fill="currentColor">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8.99 15v1c0 1.1.9 2 2 2v1.93C7.06 19.43 4 16.07 4 12zm13.89 5.4c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 2.08-.81 3.98-2.11 5.4z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="header-search">
+                <input type="search" placeholder="Buscar" />
+                <button type="submit">
+                    <svg class="svg-search" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                        width="24px" fill="currentColor">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="header-end">
+                <!--Mode Oscuro-->
+                <div class="header-switch" id="switch"></div>
+                <!--Ayuda-->
+                <div class="ayuda" id="ayuda">
+                    <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                        width="24px" fill="currentColor">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" />
+                    </svg>
+                </div>
+                <!--Notificaciones-->
+                <div class="notificaciones" id="notificaciones">
+                    <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                        width="24px" fill="currentColor">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
+                    </svg>
+                </div>
+                <!--desplegable de usuario-->
+                <div class="perfil" id="perfil">
+                    <!--Perfil-->
+                    <div class="header-menu-desplegable">
+                        <a href="" class="desplegable-perfil">
+                            <!--fill=currentColor sirve para que el color del svg cambie segun el el color del texto del link-->
+                            <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                                width="24px" fill="currentColor">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z" />
+                            </svg>
+                            <span>Perfil</span>
+                        </a>
+                        <!--Suscripcion-->
+                        <a href="" class="desplegable-suscripcion">
+                            <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="1.25em"
+                                height="1.25em" class="smaller s-mr-05" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28ZM16 31C24.2843 31 31 24.2843 31 16C31 7.71573 24.2843 1 16 1C7.71573 1 1 7.71573 1 16C1 24.2843 7.71573 31 16 31Z">
+                                </path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1733 8.41383C14.878 6.83286 17.122 6.83285 17.8267 8.41383L19.2279 11.5572L22.6504 11.9184C24.3717 12.1001 25.0652 14.2343 23.7794 15.3931L21.2228 17.697L21.9369 21.0636C22.296 22.7569 20.4806 24.0759 18.9812 23.2111L16 21.4916L13.0188 23.2111C11.5194 24.0759 9.70395 22.7569 10.0631 21.0636L10.7772 17.697L8.22063 15.3931C6.93481 14.2343 7.62824 12.1001 9.34961 11.9184L12.7721 11.5572L14.1733 8.41383ZM16 11.6843L15.2774 13.3054C14.9867 13.9575 14.3705 14.4051 13.6606 14.4801L11.8955 14.6664L13.214 15.8546C13.7443 16.3325 13.9797 17.0569 13.8315 17.7552L13.4633 19.4915L15.0008 18.6047C15.6192 18.248 16.3808 18.248 16.9992 18.6047L18.5367 19.4915L18.1685 17.7552C18.0203 17.0569 18.2557 16.3325 18.786 15.8546L20.1045 14.6664L18.3394 14.4801C17.6295 14.4051 17.0133 13.9575 16.7226 13.3054L16 11.6843Z">
+                                </path>
+                            </svg>
+                            <span>Suscripcion</span>
+                        </a>
+                        <a href="" class="desplegable-salir">
+                            <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor">
+                                <g>
+                                    <path d="M0,0h24v24H0V0z" fill="none" />
+                                </g>
+                                <g>
+                                    <path
+                                        d="M17,8l-1.41,1.41L17.17,11H9v2h8.17l-1.58,1.58L17,16l4-4L17,8z M5,5h7V3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h7v-2H5V5z" />
+                                </g>
+                            </svg>
+                            <span>Salir</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside class="aside">
+            <li class="header-menu" id="menu">
+                <svg class="svg-color svg-menu-icon" xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 0 24 24" width="24px" fill="currentColor">
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
+                <span><b>Punto Promo</b></span>
+            </li>
+            <div class="header-line"></div>
+            <li class="aside-promo">
+                <a href="pagina2.html">
+                    <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                        width="24px" fill="currentColor">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z" />
+                    </svg>
+                    <span>Promo</span>
+                </a>
+            </li>
+            <li class="aside-tienda">
+                <a href="pagina3.html">
+                    <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                        width="24px" fill="currentColor">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M18.36 9l.6 3H5.04l.6-3h12.72M20 4H4v2h16V4zm0 3H4l-1 5v2h1v6h10v-6h4v6h2v-6h1v-2l-1-5zM6 18v-4h6v4H6z" />
+                    </svg>
+                    <span>Tiendas</span>
+                </a>
+            </li>
+            <li class="aside-pediente">
+                <a href="pagina4.html">
+                    <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                        width="24px" fill="currentColor">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z" />
+                    </svg>
+                    <span>Pendiente</span>
+                </a>
+            </li>
+            <li class="aside-retiro">
+                <a href="pagina5.html">
+                    <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                        height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor">
+                        <g>
+                            <path d="M0,0h24v24H0V0z" fill="none" />
+                        </g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M11,13V9c0-0.55-0.45-1-1-1H6V6h5V4H8.5V3h-2v1H5C4.45,4,4,4.45,4,5v4c0,0.55,0.45,1,1,1h4v2H4v2h2.5v1h2v-1H10 C10.55,14,11,13.55,11,13z" />
+                                <polygon points="19.59,12.52 13.93,18.17 11.1,15.34 9.69,16.76 13.93,21 21,13.93" />
+                            </g>
+                        </g>
+                    </svg>
+                    <span>Retiros</span>
+                </a>
+            </li>
+            <li class="aside-ahorro">
+                <a href="pagina6.html">
+                    <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                        height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor">
+                        <rect fill="none" height="24" width="24" />
+                        <g>
+                            <path
+                                d="M15,10c0-0.55,0.45-1,1-1s1,0.45,1,1c0,0.55-0.45,1-1,1S15,10.55,15,10z M8,9h5V7H8V9z M22,7.5v6.97l-2.82,0.94L17.5,21 L12,21v-2h-2v2l-5.5,0C4.5,21,2,12.54,2,9.5S4.46,4,7.5,4l5,0c0.91-1.21,2.36-2,4-2C17.33,2,18,2.67,18,3.5 c0,0.21-0.04,0.4-0.12,0.58c-0.14,0.34-0.26,0.73-0.32,1.15l2.27,2.27H22z M20,9.5h-1L15.5,6c0-0.65,0.09-1.29,0.26-1.91 C14.79,4.34,14,5.06,13.67,6L7.5,6C5.57,6,4,7.57,4,9.5c0,1.88,1.22,6.65,2.01,9.5L8,19v-2h6v2l2.01,0l1.55-5.15L20,13.03V9.5z" />
+                        </g>
+                    </svg>
+                    <span>Ahorro</span>
+                </a>
+            </li>
+            <li class="aside-historial">
+                <a href="pagina7.html">
+                    <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                        height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor">
+                        <g>
+                            <rect fill="none" height="24" width="24" x="0" />
+                        </g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8 S16.41,20,12,20z M12.5,7H11v6l5.2,3.2l0.8-1.3l-4.5-2.7V7z" />
+                            </g>
+                        </g>
+                    </svg>
+                    <span>Historial</span>
+                </a>
+            </li>
+            <li class="aside-seguridad">
+                <a href="pagina8.html">
+                    <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                        width="24px" fill="currentColor">
+                        <g fill="none">
+                            <path d="M0 0h24v24H0V0z" />
+                            <path d="M0 0h24v24H0V0z" opacity=".87" />
+                        </g>
+                        <path
+                            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" />
+                    </svg>
+                    <span>Seguridad</span>
+                </a>
+            </li>
+        </aside>
+        <main class="main pagina7">
+            <div class="opacar"></div>
+        </main>
+    </div>
+</body>
+<script src="JS/pagina.js"></script>
+
+</html>

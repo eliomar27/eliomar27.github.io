@@ -1,0 +1,18 @@
+@import 'import/variables';
+@import 'import/mixin';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap');
+//font-family: 'Noto Sans Mono', monospace;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap'); //font-family: 'Kanit', sans-serif;
+@import 'import/slider';
+@import 'Import/menu';
+@import 'import/menu-media';
+@import 'import/libro';
+@import 'import/libro-media';
+@import 'import/footer';
+
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
