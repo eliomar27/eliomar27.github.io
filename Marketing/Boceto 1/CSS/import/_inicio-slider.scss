@@ -32,11 +32,11 @@
             border-radius: 5px;
             box-shadow: 0 5px 25px #4286f4a8;
             h2 {
-                font-size: 2em;
+                font-size: $size-text-slider-info-h2;
                 font-weight: 800;
             }
             p {
-                font-size: 1em;
+                font-size: $size-text-slider-info-p;
                 font-weight: 400;
             }
         }
@@ -51,7 +51,7 @@
         .prev-btn,
         .next-btn {
             z-index: 999;
-            font-size: 2em;
+            font-size: $size-text-slider-navigation-btn;
             color: #222;
             background: rgba(255, 255, 255, 0.8);
             box-shadow: 0 5px 25px #4285F4;
@@ -98,21 +98,6 @@
                 width: 80%;
                 margin-left: auto;
                 margin-right: auto;
-            }
-        }
-    }
-}
-@media (max-width: 500px) {
-    .slider {
-        .slide {
-            .info {
-                h2 {
-                    font-size: 1.8em;
-                    line-height: 40px;
-                }
-                p {
-                    font-size: 0.9em;
-                }
             }
         }
     }

@@ -52,14 +52,20 @@
       //top right bottom left
       margin: 31px 0px 0px -50px;
       background: rgb(255, 255, 255);
-      height: 140px;
+      height: 110px;
       width: 120px;
       border: #000000 solid 1px;
       border-radius: 5px;
       a {
-        padding: 10px;
+       padding: 5px;
         display: grid;
         grid-template-columns: 1fr 2fr;
+        span{
+           padding-top: 5px;
+           font-weight:550;
+           letter-spacing: 1px;
+        font-size: .7em;
+        }
       }
     }
   }

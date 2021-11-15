@@ -9,5 +9,6 @@
         "localstorage",
         "navigation",
         "slides"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

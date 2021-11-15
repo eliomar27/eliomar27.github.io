@@ -39,18 +39,19 @@
     width: 200px;
     z-index: 999;
     background: rgb(255, 255, 255);
-    transition: width 0.5s;
     will-change: width;
+    transition: width 0.5s;
     .header-menu {
       svg {
         margin-left: 0px;
       }
       span {
-        margin-top: 5px;
+        margin-top: 7.5px;
         display: block;
         position: absolute;
         margin-left: 42px;
-        font-size: 1.5em;
+        font-size: 1.25em;
+        font-weight:100;
       }
     }
     li {
@@ -61,7 +62,8 @@
         span {
           //top right bottom left
           margin: -42px 0px 0px 42px;
-          font-size: 1.5em;
+          padding-top: 7.5px;
+          font-size: 1.25em;
           position: absolute;
           display: block;
         }

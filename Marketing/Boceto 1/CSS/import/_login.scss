@@ -24,7 +24,7 @@
         button {
           @extend input;
           span {
-            font-size: 1em;
+            font-size: $size-text-login;
           }
         }
       }

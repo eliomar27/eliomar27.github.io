@@ -1,0 +1,72 @@
+//estilo de los articulos...
+.a {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  .a-portada {
+    grid-template-columns: subgrid;
+    background: rgb(255, 204, 0);
+    background: url(img/290.jpg);
+    //background-position-y: -200px  ;
+    grid-column: 1 / span 12;
+    @include fondo;
+    display: grid;
+    height: 400px;
+    h1 {
+      text-shadow: 4px 4px 3px #000000;
+      grid-column: 1 / span 12;
+      text-align: center;
+      font-size: $size-text-a-portada;
+      color: #fff;
+      margin: 0;
+    }
+    h2 {
+      text-shadow: 4px 4px 3px #040404;
+      grid-column: 1 / span 12;
+      text-align: center;
+      font-size: $size-text-a-eslogan;
+      color: rgb(248, 248, 248);
+    }
+    h3{
+      @extend h2;
+      font-size: 3em;
+    }
+  }
+  .a-article {
+    grid-template-columns: subgrid;
+    display: grid;
+    grid-column: 1 / span 12;
+    .a-titulo {
+      grid-column: 1 / span 12;
+      display: grid;
+      grid-template-columns: subgrid;
+      h2 {
+        grid-column: span 8;
+        //top right bottom left
+        margin: 10px 0px 0px 0px;
+        text-align: center;
+        font-size: $size-text-a-titulo;
+      }
+    }
+    .a-parrafo {
+      grid-column: span 8;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      p {
+        //top right bottom left
+        margin: 20px 0px 0px 0px;
+        text-align: justify;
+        font-size: $size-text-a-parrafo;
+        vertical-align: 80%;
+      }
+    }
+    .a-imagen {
+      grid-column:span 4;
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

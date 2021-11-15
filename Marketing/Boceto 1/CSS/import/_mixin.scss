@@ -82,3 +82,11 @@
     }
   }
 }
+@mixin time {
+  will-change: transform;
+  transition-property: transform;
+  transition-duration: 2s;
+  transition: transform 2s cubic-bezier(.07,.99,.74,-1.13);
+  transition-delay: 2s;
+  transition: .5s;
+}

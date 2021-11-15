@@ -214,49 +214,59 @@ body.dark nav a:hover {
 
 .slide {
   width: 20%;
-  -webkit-transition: 4s ease-out all;
-  transition: 4s ease-out all;
+  -webkit-transition: 1s ease-out all;
+  transition: 1s ease-out all;
 }
 
 #radio1:checked ~ .first {
   margin-left: 0;
   -webkit-transition: 0s;
   transition: 0s;
+  will-change: margin-left;
 }
 
 #radio2:checked ~ .first {
+  will-change: margin-left;
   margin-left: -20%;
 }
 
 #radio3:checked ~ .first {
+  will-change: margin-left;
   margin-left: -40%;
 }
 
 #radio4:checked ~ .first {
+  will-change: margin-left;
   margin-left: -60%;
 }
 
 #radio5:checked ~ .first {
+  will-change: margin-left;
   margin-left: -80%;
 }
 
 #radio6:checked ~ .first {
+  will-change: margin-left;
   margin-left: -100%;
 }
 
 #radio7:checked ~ .first {
+  will-change: margin-left;
   margin-left: -120%;
 }
 
 #radio8:checked ~ .first {
+  will-change: margin-left;
   margin-left: -140%;
 }
 
 #radio9:checked ~ .first {
+  will-change: margin-left;
   margin-left: -160%;
 }
 
 #radio10:checked ~ .first {
+  will-change: margin-left;
   margin-left: -180%;
 }
 
